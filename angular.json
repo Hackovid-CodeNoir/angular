@@ -23,11 +23,9 @@
             "polyfills": "projects/market-kzero/src/polyfills.ts",
             "tsConfig": "projects/market-kzero/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/market-kzero/src/favicon.ico",
-              "projects/market-kzero/src/assets"
-            ],
+            "assets": ["projects/market-kzero/src/favicon.ico", "projects/market-kzero/src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/market-kzero/src/styles.scss"
             ],
             "scripts": []
@@ -87,11 +85,9 @@
             "polyfills": "projects/market-kzero/src/polyfills.ts",
             "tsConfig": "projects/market-kzero/tsconfig.spec.json",
             "karmaConfig": "projects/market-kzero/karma.conf.js",
-            "assets": [
-              "projects/market-kzero/src/favicon.ico",
-              "projects/market-kzero/src/assets"
-            ],
+            "assets": ["projects/market-kzero/src/favicon.ico", "projects/market-kzero/src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/market-kzero/src/styles.scss"
             ],
             "scripts": []
@@ -105,9 +101,7 @@
               "projects/market-kzero/tsconfig.spec.json",
               "projects/market-kzero/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -123,6 +117,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "market-kzero"
 }
