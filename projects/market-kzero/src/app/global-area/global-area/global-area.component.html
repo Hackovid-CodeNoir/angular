@@ -41,11 +41,7 @@
           Logo MarketKZero
         </div>
         <span class="flex-spacer"></span>
-        <div class="bottom-menu" *ngIf="(isHandset$ | async) === false">
-          <button mat-button>Link 1</button>
-          <button mat-button>Link 2</button>
-          <button mat-button>Link3</button>
-        </div>
+        <app-header-links *ngIf="(isHandset$ | async) === false"></app-header-links>
       </mat-toolbar-row>
     </mat-toolbar>
     <!-- Add Content Here -->

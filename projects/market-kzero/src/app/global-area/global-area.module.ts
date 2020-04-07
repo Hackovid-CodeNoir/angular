@@ -12,6 +12,7 @@ import { HeaderContactComponent } from './header-contact/header-contact.componen
 import { HeaderSearchComponent } from './header-search/header-search.component';
 import { HeaderProfileComponent } from './header-profile/header-profile.component';
 import { HeaderLanguageSelectorComponent } from './header-language-selector/header-language-selector.component';
+import { HeaderLinksComponent } from './header-links/header-links.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HeaderLanguageSelectorComponent } from './header-language-selector/head
     HeaderSearchComponent,
     HeaderProfileComponent,
     HeaderLanguageSelectorComponent,
+    HeaderLinksComponent,
   ],
   imports: [
     CommonModule,
