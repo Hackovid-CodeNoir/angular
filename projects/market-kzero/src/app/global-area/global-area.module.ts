@@ -11,9 +11,16 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HeaderContactComponent } from './header-contact/header-contact.component';
 import { HeaderSearchComponent } from './header-search/header-search.component';
 import { HeaderProfileComponent } from './header-profile/header-profile.component';
+import { HeaderLanguageSelectorComponent } from './header-language-selector/header-language-selector.component';
 
 @NgModule({
-  declarations: [GlobalAreaComponent, HeaderContactComponent, HeaderSearchComponent, HeaderProfileComponent],
+  declarations: [
+    GlobalAreaComponent,
+    HeaderContactComponent,
+    HeaderSearchComponent,
+    HeaderProfileComponent,
+    HeaderLanguageSelectorComponent,
+  ],
   imports: [
     CommonModule,
     LayoutModule,
