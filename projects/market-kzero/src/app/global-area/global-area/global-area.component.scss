@@ -17,9 +17,14 @@
 }
 
 /*Head components*/
+span {
+  font-size: 30px;
+}
 .header-cont-top {
+  width: 95%;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .contact {
@@ -29,9 +34,23 @@
 .options {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .options .material-icons {
   margin-right: 5px;
+}
+
+.header-cont-bottom {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.button-menu {
+  display: none;
+}
+
+.icono {
+  font-size: 40px;
 }
