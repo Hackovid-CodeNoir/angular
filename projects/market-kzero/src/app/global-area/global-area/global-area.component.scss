@@ -17,14 +17,12 @@
 }
 
 /*Head components*/
-span {
-  font-size: 30px;
-}
+
 .header-cont-top {
   width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .contact {
@@ -43,14 +41,43 @@ span {
 
 .header-cont-bottom {
   width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
-.button-menu {
+.header-cont-top button {
+  padding: 0;
+}
+.bottom-menu {
   display: none;
 }
 
 .icono {
   font-size: 40px;
+}
+
+.options span {
+  font-size: 20px;
+}
+@media (min-width: 960px) {
+  .bottom-menu {
+    display: inline-block;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact .material-icons {
+    margin-right: 5px;
+  }
+
+  .options {
+    justify-content: flex-end;
+  }
+  .options span {
+    margin-left: 50px;
+  }
 }
