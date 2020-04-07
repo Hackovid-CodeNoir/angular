@@ -1,3 +1,6 @@
+:root {
+}
+
 .sidenav-container {
   height: 100%;
 }
@@ -80,4 +83,13 @@
   .options span {
     margin-left: 50px;
   }
+}
+
+/*Sidenav*/
+.sidenav-items span {
+  margin-left: 60px;
+}
+
+.sidenav-items a:hover {
+  background-color: lightblue;
 }
