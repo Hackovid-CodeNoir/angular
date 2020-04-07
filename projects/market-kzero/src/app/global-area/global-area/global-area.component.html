@@ -5,7 +5,6 @@
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="'over'"
-    [opened]="isHandset$ | async"
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
@@ -15,17 +14,89 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Mercat KZero</span>
+    <mat-toolbar color="primary" style="height: 20%;">
+      <mat-toolbar-row class="header-cont-top">
+        <div class="contact">
+          <span class="material-icons">
+            call
+          </span>
+          <span>666-666-666</span>
+        </div>
+        <div class="options">
+          <div>
+            <button mat-button [matMenuTriggerFor]="menu">
+              <span class="material-icons">
+                search
+              </span>
+              Search
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu>
+          </div>
+          <div>
+            <button mat-button [matMenuTriggerFor]="menu">
+              <span class="material-icons">
+                supervisor_account
+              </span>
+              Account
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu>
+          </div>
+          <div>
+            <button mat-button [matMenuTriggerFor]="menu">
+              <span class="material-icons">
+                translate
+              </span>
+              Lenguage
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu>
+          </div>
+        </div>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="header-cont-bottom">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <div class="logo">
+          Logo MarketKZero
+        </div>
+        <div>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </div>
+      </mat-toolbar-row>
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>

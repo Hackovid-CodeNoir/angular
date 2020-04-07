@@ -15,3 +15,23 @@
   top: 0;
   z-index: 1;
 }
+
+/*Head components*/
+.header-cont-top {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  display: none;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.options .material-icons {
+  margin-right: 5px;
+}
