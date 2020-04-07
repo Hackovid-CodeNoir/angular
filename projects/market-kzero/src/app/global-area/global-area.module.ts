@@ -9,9 +9,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderContactComponent } from './header-contact/header-contact.component';
+import { HeaderSearchComponent } from './header-search/header-search.component';
 
 @NgModule({
-  declarations: [GlobalAreaComponent, HeaderContactComponent],
+  declarations: [GlobalAreaComponent, HeaderContactComponent, HeaderSearchComponent],
   imports: [
     CommonModule,
     LayoutModule,

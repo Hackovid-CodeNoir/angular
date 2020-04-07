@@ -20,12 +20,7 @@
         <app-header-contact></app-header-contact>
         <span class="flex-spacer"></span>
         <div class="global-widgets">
-          <button mat-button>
-            <mat-icon>
-              search
-            </mat-icon>
-            Search
-          </button>
+          <app-header-search></app-header-search>
           <ng-container *ngIf="(isHandset$ | async) === false">
             <button mat-button [matMenuTriggerFor]="menu">
               <mat-icon>
