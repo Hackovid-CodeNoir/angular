@@ -1,8 +1,15 @@
-:root {
-}
+$texto: #2a0a17;
+$titulo1: #719a6e;
+$titulo2: #b47a26;
+$titulo3: #a8aa4f;
+$fondo: #fbf1dc;
 
+mat-toolbar {
+  background-color: $fondo;
+}
 .sidenav-container {
   height: 100%;
+  background-color: $fondo;
 }
 
 .sidenav {
@@ -32,10 +39,23 @@
   display: none;
 }
 
+.contact .number {
+  color: $texto;
+  font-size: 14px;
+}
+
+.contact .icon-tel {
+  font-size: 20px;
+}
+
 .options {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.options span,
+.options button {
+  color: $texto;
 }
 
 .options .material-icons {
@@ -63,6 +83,10 @@
 .options span {
   font-size: 20px;
 }
+
+.bottom-menu {
+  color: $titulo2;
+}
 @media (min-width: 960px) {
   .bottom-menu {
     display: inline-block;
@@ -86,10 +110,21 @@
 }
 
 /*Sidenav*/
+.sidenav {
+  background-color: $titulo2;
+}
 .sidenav-items span {
   margin-left: 60px;
 }
 
 .sidenav-items a:hover {
-  background-color: lightblue;
+  background-color: rgb(96, 168, 192);
+}
+.sidenav-items a {
+  color: $fondo;
+}
+
+.toolbar-menu {
+  color: $texto;
+  font-size: 28px;
 }

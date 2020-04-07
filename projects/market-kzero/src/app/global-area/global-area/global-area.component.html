@@ -7,21 +7,21 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="'over'"
   >
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-toolbar class="toolbar-menu">Menu</mat-toolbar>
+    <mat-nav-list class="sidenav-items">
       <a mat-list-item href="#">Link 1</a>
       <a mat-list-item href="#">Link 2</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <mat-toolbar-row class="header-cont-top">
         <div class="contact">
-          <span class="material-icons">
+          <span class="material-icons icon-tel">
             call
           </span>
-          <span>666-666-666</span>
+          <span class="number">666-666-666</span>
         </div>
         <div class="options">
           <div>
@@ -69,8 +69,9 @@
           <mat-icon aria-label="Side nav toggle icon" class="icono">menu</mat-icon>
         </button>
         <div class="logo">
-          Logo MarketKZero
+          <h1>Logo MerkatKZero</h1>
         </div>
+
         <div class="bottom-menu">
           <button mat-button [matMenuTriggerFor]="menu">Menu</button>
           <mat-menu #menu="matMenu">
