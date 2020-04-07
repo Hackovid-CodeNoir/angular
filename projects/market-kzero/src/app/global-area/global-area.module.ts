@@ -8,9 +8,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { HeaderContactComponent } from './header-contact/header-contact.component';
 
 @NgModule({
-  declarations: [GlobalAreaComponent],
+  declarations: [GlobalAreaComponent, HeaderContactComponent],
   imports: [
     CommonModule,
     LayoutModule,
