@@ -13,6 +13,7 @@ import { HeaderSearchComponent } from './header-search/header-search.component';
 import { HeaderProfileComponent } from './header-profile/header-profile.component';
 import { HeaderLanguageSelectorComponent } from './header-language-selector/header-language-selector.component';
 import { HeaderLinksComponent } from './header-links/header-links.component';
+import { MapViewModule } from '../map-view/map-view.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HeaderLinksComponent } from './header-links/header-links.component';
     MatIconModule,
     MatListModule,
     MatMenuModule,
+    MapViewModule,
   ],
   exports: [GlobalAreaComponent],
 })
