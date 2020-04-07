@@ -15,50 +15,47 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <mat-toolbar-row class="header-cont-top">
-        <div class="contact">
-          <span class="material-icons">
-            call
-          </span>
-          <span>666-666-666</span>
-        </div>
-        <div class="options">
-          <div>
-            <button mat-button>
-              <span class="material-icons">
-                search
-              </span>
-              Search
-            </button>
-          </div>
-          <div>
+    <mat-toolbar>
+      <mat-toolbar-row class="first-header-row">
+        <button mat-button>
+          <mat-icon>
+            headset_mic
+          </mat-icon>
+          (+34) 123 456 789
+        </button>
+        <span class="flex-spacer"></span>
+        <div class="global-widgets">
+          <button mat-button>
+            <mat-icon>
+              search
+            </mat-icon>
+            Search
+          </button>
+          <ng-container *ngIf="(isHandset$ | async) === false">
             <button mat-button [matMenuTriggerFor]="menu">
-              <span class="material-icons">
+              <mat-icon>
                 supervisor_account
-              </span>
+              </mat-icon>
               Account
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item>Item 1</button>
               <button mat-menu-item>Item 2</button>
             </mat-menu>
-          </div>
-          <div>
             <button mat-button [matMenuTriggerFor]="menu">
-              <span class="material-icons">
+              <mat-icon>
                 translate
-              </span>
-              Lenguage
+              </mat-icon>
+              Language
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item>Item 1</button>
               <button mat-menu-item>Item 2</button>
             </mat-menu>
-          </div>
+          </ng-container>
         </div>
       </mat-toolbar-row>
-      <mat-toolbar-row class="header-cont-bottom">
+      <mat-toolbar-row class="second-header-row">
         <button
           type="button"
           aria-label="Toggle sidenav"
@@ -66,32 +63,16 @@
           (click)="drawer.toggle()"
           *ngIf="isHandset$ | async"
         >
-          <mat-icon aria-label="Side nav toggle icon" class="icono">menu</mat-icon>
+          <mat-icon aria-label="Side nav toggle icon" class="icon">menu</mat-icon>
         </button>
         <div class="logo">
           Logo MarketKZero
         </div>
-        <div class="bottom-menu">
-          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
-          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
-          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
-          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
+        <span class="flex-spacer"></span>
+        <div class="bottom-menu" *ngIf="(isHandset$ | async) === false">
+          <button mat-button>Link 1</button>
+          <button mat-button>Link 2</button>
+          <button mat-button>Link3</button>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>

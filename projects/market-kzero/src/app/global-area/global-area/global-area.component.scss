@@ -1,95 +1,25 @@
-:root {
-}
-
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
   width: 200px;
-}
 
-.sidenav .mat-toolbar {
-  background: inherit;
-}
+  .sidenav-items {
+    span {
+      margin-left: 60px;
+    }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-/*Head components*/
-
-.header-cont-top {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.contact {
-  display: none;
-}
-
-.options {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.options .material-icons {
-  margin-right: 5px;
-}
-
-.header-cont-bottom {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-}
-.header-cont-top button {
-  padding: 0;
-}
-.bottom-menu {
-  display: none;
-}
-
-.icono {
-  font-size: 40px;
-}
-
-.options span {
-  font-size: 20px;
-}
-@media (min-width: 960px) {
-  .bottom-menu {
-    display: inline-block;
+    a:hover {
+      background-color: lightblue;
+    }
   }
 
-  .contact {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .contact .material-icons {
-    margin-right: 5px;
-  }
+  .mat-toolbar {
+    background: inherit;
 
-  .options {
-    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
-  .options span {
-    margin-left: 50px;
-  }
-}
-
-/*Sidenav*/
-.sidenav-items span {
-  margin-left: 60px;
-}
-
-.sidenav-items a:hover {
-  background-color: lightblue;
 }
