@@ -3,7 +3,6 @@
   flex-direction: column;
 
   app-product-map {
-    width: 100vw;
     height: calc(100vh - 2 * 56px);
   }
 
@@ -14,7 +13,7 @@
     height: calc(100vh - 64px);
 
     app-product-map {
-      width: 50vw;
+      width: 100vw;
       height: calc(100vh - 64px);
     }
 
