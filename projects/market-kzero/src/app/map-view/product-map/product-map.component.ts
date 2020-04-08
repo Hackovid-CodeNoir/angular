@@ -1,10 +1,12 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { markers } from './markers';
+import { google } from 'google-maps';
 
 @Component({
   selector: 'app-product-map',
   templateUrl: './product-map.component.html',
   styleUrls: ['./product-map.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ProductMapComponent implements AfterViewInit {
   @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
