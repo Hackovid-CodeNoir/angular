@@ -4,16 +4,13 @@
   <mat-card-content>
     <h2 mat-card-title>{{ seller.name }}</h2>
     <h3 class="mat-h3">{{ seller.productName }}</h3>
-
-    <div style="display: flex; justify-content: center;">
-      <app-rating-stars
-        [rating]="seller.rating"
-        [itemId]="seller.id"
-        (ratingClick)="ratingComponentClick($event)"
-      ></app-rating-stars>
-    </div>
+    <app-rating-stars
+      [rating]="seller.rating"
+      [itemId]="seller.id"
+      (ratingClick)="ratingComponentClick($event)"
+    ></app-rating-stars>
   </mat-card-content>
-  <mat-card-actions class="clear">
+  <mat-card-actions>
     <button mat-button>Qui sóc</button>
     <button mat-button>Què tinc</button>
   </mat-card-actions>

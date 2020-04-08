@@ -12,6 +12,7 @@ export class RatingStarsComponent implements OnInit {
   @Output() ratingClick: EventEmitter<any> = new EventEmitter();
 
   inputName: string;
+
   ngOnInit() {
     this.inputName = this.itemId + '_rating';
   }
@@ -20,7 +21,7 @@ export class RatingStarsComponent implements OnInit {
     this.rating = rating;
     this.ratingClick.emit({
       itemId: this.itemId,
-      rating: rating,
+      rating,
     });
   }
 }

@@ -11,10 +11,9 @@ export class ProductItemComponent {
   public sellers = sellers;
 
   ratingClicked: number;
-  itemIdRatingClicked: string;
 
   ratingComponentClick(clickObj: any): void {
-    const item = this.sellers.find((i: any) => i.id === clickObj.itemId);
+    const item = this.sellers.find((seller: any) => seller.id === clickObj.itemId);
     if (!!item) {
       item.rating = clickObj.rating;
       this.ratingClicked = clickObj.rating;
