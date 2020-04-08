@@ -1,7 +1,22 @@
 .example-card {
-  max-width: 25%;
+  width: 200px;
+  text-align: center;
 }
 
 .example-header-image {
   background-size: cover;
+}
+
+.img-producto {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-content {
+  text-align: center;
 }
