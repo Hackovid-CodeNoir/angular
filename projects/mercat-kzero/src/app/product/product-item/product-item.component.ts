@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { sellers } from '../product-list/sellers';
 
 @Component({
   selector: 'app-product-item',
@@ -7,4 +8,15 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductItemComponent {
   @Input() seller: any;
+  public sellers = sellers;
+
+  ratingClicked: number;
+
+  ratingComponentClick(clickObj: any): void {
+    const item = this.sellers.find((seller: any) => seller.id === clickObj.itemId);
+    if (!!item) {
+      item.rating = clickObj.rating;
+      this.ratingClicked = clickObj.rating;
+    }
+  }
 }
