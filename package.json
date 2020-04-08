@@ -7,8 +7,7 @@
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint"
   },
   "private": true,
   "husky": {
@@ -27,6 +26,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@angular/service-worker": "~9.1.0",
     "@types/google-maps": "^3.2.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
