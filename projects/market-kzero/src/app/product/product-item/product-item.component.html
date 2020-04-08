@@ -1,11 +1,9 @@
-<mat-card class="example-card">
+<mat-card class="product-card">
   <h2 mat-card-title>{{ seller.name }}</h2>
-  <img class="img-producto" mat-card-image [src]="seller.img" [alt]="seller.name" style="max-width: 1500px;" />
+  <img mat-card-image [src]="seller.img" [alt]="seller.name" />
 
   <mat-card-content>
-    <h3>
-      {{ seller.productName }}
-    </h3>
+    <h3 class="mat-h3">{{ seller.productName }}</h3>
     <span class="material-icons">
       star
     </span>
@@ -23,7 +21,7 @@
     </span>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button>Qui sóc</button>
-    <button mat-raised-button>Què tinc</button>
+    <button mat-button>Qui sóc</button>
+    <button mat-button>Què tinc</button>
   </mat-card-actions>
 </mat-card>

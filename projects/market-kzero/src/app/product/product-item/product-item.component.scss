@@ -1,23 +1,10 @@
-.example-card {
-  width: 200px;
-  text-align: center;
-  margin: 10px;
-  height: 450px;
-}
-
-.example-header-image {
-  background-size: cover;
-}
-
-.img-producto {
-  margin-top: 0;
-  margin-bottom: 0;
+.product-card {
+  max-width: 200px;
+  margin: 16px;
 }
 
 mat-card-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 mat-card-content {
