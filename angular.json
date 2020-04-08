@@ -3,30 +3,30 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "market-kzero": {
+    "mercat-kzero": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/market-kzero",
-      "sourceRoot": "projects/market-kzero/src",
+      "root": "projects/mercat-kzero",
+      "sourceRoot": "projects/mercat-kzero/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/market-kzero",
-            "index": "projects/market-kzero/src/index.html",
-            "main": "projects/market-kzero/src/main.ts",
-            "polyfills": "projects/market-kzero/src/polyfills.ts",
-            "tsConfig": "projects/market-kzero/tsconfig.app.json",
+            "outputPath": "dist/mercat-kzero",
+            "index": "projects/mercat-kzero/src/index.html",
+            "main": "projects/mercat-kzero/src/main.ts",
+            "polyfills": "projects/mercat-kzero/src/polyfills.ts",
+            "tsConfig": "projects/mercat-kzero/tsconfig.app.json",
             "aot": true,
-            "assets": ["projects/market-kzero/src/favicon.ico", "projects/market-kzero/src/assets"],
+            "assets": ["projects/mercat-kzero/src/favicon.ico", "projects/mercat-kzero/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "projects/market-kzero/src/styles.scss"
+              "projects/mercat-kzero/src/styles.scss"
             ],
             "scripts": []
           },
@@ -34,8 +34,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/market-kzero/src/environments/environment.ts",
-                  "with": "projects/market-kzero/src/environments/environment.prod.ts"
+                  "replace": "projects/mercat-kzero/src/environments/environment.ts",
+                  "with": "projects/mercat-kzero/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -64,31 +64,31 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "market-kzero:build"
+            "browserTarget": "mercat-kzero:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "market-kzero:build:production"
+              "browserTarget": "mercat-kzero:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "market-kzero:build"
+            "browserTarget": "mercat-kzero:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/market-kzero/src/test.ts",
-            "polyfills": "projects/market-kzero/src/polyfills.ts",
-            "tsConfig": "projects/market-kzero/tsconfig.spec.json",
-            "karmaConfig": "projects/market-kzero/karma.conf.js",
-            "assets": ["projects/market-kzero/src/favicon.ico", "projects/market-kzero/src/assets"],
+            "main": "projects/mercat-kzero/src/test.ts",
+            "polyfills": "projects/mercat-kzero/src/polyfills.ts",
+            "tsConfig": "projects/mercat-kzero/tsconfig.spec.json",
+            "karmaConfig": "projects/mercat-kzero/karma.conf.js",
+            "assets": ["projects/mercat-kzero/src/favicon.ico", "projects/mercat-kzero/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "projects/market-kzero/src/styles.scss"
+              "projects/mercat-kzero/src/styles.scss"
             ],
             "scripts": []
           }
@@ -97,9 +97,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/market-kzero/tsconfig.app.json",
-              "projects/market-kzero/tsconfig.spec.json",
-              "projects/market-kzero/e2e/tsconfig.json"
+              "projects/mercat-kzero/tsconfig.app.json",
+              "projects/mercat-kzero/tsconfig.spec.json",
+              "projects/mercat-kzero/e2e/tsconfig.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -107,17 +107,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/market-kzero/e2e/protractor.conf.js",
-            "devServerTarget": "market-kzero:serve"
+            "protractorConfig": "projects/mercat-kzero/e2e/protractor.conf.js",
+            "devServerTarget": "mercat-kzero:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "market-kzero:serve:production"
+              "devServerTarget": "mercat-kzero:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "market-kzero"
+  "defaultProject": "mercat-kzero"
 }
