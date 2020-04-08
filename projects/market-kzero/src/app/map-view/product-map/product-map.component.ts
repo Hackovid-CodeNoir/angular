@@ -18,6 +18,7 @@ export class ProductMapComponent implements AfterViewInit {
     center: this.coordinates,
     zoom: 14,
     scrollwheel: false,
+    gestureHandling: 'cooperative',
   };
 
   markers = markers;
