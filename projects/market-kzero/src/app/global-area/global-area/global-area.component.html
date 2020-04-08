@@ -17,6 +17,12 @@
   <mat-sidenav-content>
     <mat-toolbar>
       <mat-toolbar-row class="first-header-row">
+        <ng-container *ngIf="isHandset$ | async">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon" class="icon">menu</mat-icon>
+          </button>
+        </ng-container>
+        <app-header-logo></app-header-logo>
         <app-header-contact></app-header-contact>
         <span class="flex-spacer"></span>
         <div class="global-widgets">
@@ -27,24 +33,7 @@
           </ng-container>
         </div>
       </mat-toolbar-row>
-      <mat-toolbar-row class="second-header-row">
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async"
-        >
-          <mat-icon aria-label="Side nav toggle icon" class="icon">menu</mat-icon>
-        </button>
-        <div class="logo">
-          Logo MarketKZero
-        </div>
-        <span class="flex-spacer"></span>
-        <app-header-links *ngIf="(isHandset$ | async) === false"></app-header-links>
-      </mat-toolbar-row>
     </mat-toolbar>
-    <!-- Add Content Here -->
-    <app-product-list></app-product-list>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
