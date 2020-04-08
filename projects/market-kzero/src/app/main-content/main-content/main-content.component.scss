@@ -3,15 +3,24 @@
   flex-direction: column;
 
   app-product-map {
-    width: 100%;
-    min-width: 1px;
-    min-height: 1px;
+    width: 100vw;
     height: calc(100vh - 2 * 56px);
   }
 
   @media screen and (min-width: 600px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: calc(100vh - 64px);
+
     app-product-map {
-      height: calc(100vh - 2 * 64px);
+      width: 50vw;
+      height: calc(100vh - 64px);
+    }
+
+    app-product-list {
+      overflow-x: hidden;
+      overflow-y: auto;
     }
   }
 }
