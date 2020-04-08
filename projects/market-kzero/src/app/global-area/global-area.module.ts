@@ -13,9 +13,8 @@ import { HeaderSearchComponent } from './header-search/header-search.component';
 import { HeaderProfileComponent } from './header-profile/header-profile.component';
 import { HeaderLanguageSelectorComponent } from './header-language-selector/header-language-selector.component';
 import { HeaderLinksComponent } from './header-links/header-links.component';
-import { MapViewModule } from '../map-view/map-view.module';
 import { HeaderLogoComponent } from './header-logo/header-logo.component';
-import { ProductModule } from '../product/product.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,7 @@ import { ProductModule } from '../product/product.module';
     MatIconModule,
     MatListModule,
     MatMenuModule,
-    MapViewModule,
-    ProductModule,
+    RouterModule,
   ],
   exports: [GlobalAreaComponent],
 })

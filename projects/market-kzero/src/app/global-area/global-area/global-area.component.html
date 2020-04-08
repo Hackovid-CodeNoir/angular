@@ -42,7 +42,6 @@
         <app-header-links *ngIf="(isHandset$ | async) === false"></app-header-links>
       </mat-toolbar-row>
     </mat-toolbar>
-    <app-product-map></app-product-map>
-    <app-product-list></app-product-list>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
