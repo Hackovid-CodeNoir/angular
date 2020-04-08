@@ -22,4 +22,10 @@
       overflow-y: auto;
     }
   }
+
+  @media screen and (min-width: 960px) {
+    app-product-map {
+      width: 50%;
+    }
+  }
 }
