@@ -15,6 +15,7 @@ import { HeaderLanguageSelectorComponent } from './header-language-selector/head
 import { HeaderLinksComponent } from './header-links/header-links.component';
 import { MapViewModule } from '../map-view/map-view.module';
 import { HeaderLogoComponent } from './header-logo/header-logo.component';
+import { ProductModule } from '../product/product.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HeaderLogoComponent } from './header-logo/header-logo.component';
     MatListModule,
     MatMenuModule,
     MapViewModule,
+    ProductModule,
   ],
   exports: [GlobalAreaComponent],
 })
