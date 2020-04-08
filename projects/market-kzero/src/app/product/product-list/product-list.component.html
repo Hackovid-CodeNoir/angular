@@ -1,1 +1,3 @@
-<app-product-item></app-product-item>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <app-product-item [seller]="seller" *ngFor="let seller of sellers"></app-product-item>
+</div>

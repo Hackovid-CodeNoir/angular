@@ -1,11 +1,13 @@
 <mat-card class="example-card">
   <mat-card-title>
-    L´hort de la Lourdes
+    {{ seller.name }}
   </mat-card-title>
-  <img class="img-producto" mat-card-image src="../../../assets/img/cesta.png" alt="Photo of a Shiba Inu" />
+
+  <img class="img-producto" mat-card-image [src]="seller.img" [alt]="seller.name" style="max-width: 1500px;" />
+
   <mat-card-content>
     <h3>
-      Cesta ecológica
+      {{ seller.productName }}
     </h3>
     <span class="material-icons">
       star

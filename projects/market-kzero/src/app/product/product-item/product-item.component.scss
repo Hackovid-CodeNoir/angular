@@ -1,6 +1,8 @@
 .example-card {
   width: 200px;
   text-align: center;
+  margin: 10px;
+  height: 450px;
 }
 
 .example-header-image {
@@ -15,6 +17,7 @@
 mat-card-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 mat-card-content {
