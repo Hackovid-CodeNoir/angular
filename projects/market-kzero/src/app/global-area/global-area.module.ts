@@ -14,6 +14,7 @@ import { HeaderProfileComponent } from './header-profile/header-profile.componen
 import { HeaderLanguageSelectorComponent } from './header-language-selector/header-language-selector.component';
 import { HeaderLinksComponent } from './header-links/header-links.component';
 import { MapViewModule } from '../map-view/map-view.module';
+import { HeaderLogoComponent } from './header-logo/header-logo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MapViewModule } from '../map-view/map-view.module';
     HeaderProfileComponent,
     HeaderLanguageSelectorComponent,
     HeaderLinksComponent,
+    HeaderLogoComponent,
   ],
   imports: [
     CommonModule,

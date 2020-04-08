@@ -37,9 +37,7 @@
         >
           <mat-icon aria-label="Side nav toggle icon" class="icon">menu</mat-icon>
         </button>
-        <div class="logo">
-          Logo MarketKZero
-        </div>
+        <app-header-logo></app-header-logo>
         <span class="flex-spacer"></span>
         <app-header-links *ngIf="(isHandset$ | async) === false"></app-header-links>
       </mat-toolbar-row>
