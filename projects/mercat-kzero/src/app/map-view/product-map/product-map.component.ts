@@ -7,7 +7,7 @@ import { mapStyles } from './map-styles';
   selector: 'app-product-map',
   templateUrl: './product-map.component.html',
   styleUrls: ['./product-map.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class ProductMapComponent implements AfterViewInit {
   @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
@@ -20,7 +20,7 @@ export class ProductMapComponent implements AfterViewInit {
     zoom: 12,
     scrollwheel: false,
     gestureHandling: 'cooperative',
-    styles: mapStyles,
+    styles: mapStyles
   };
 
   markers = markers;
@@ -31,8 +31,9 @@ export class ProductMapComponent implements AfterViewInit {
 
   mapInitializer() {
     this.map = new google.maps.Map(this.gmap.nativeElement, this.mapOptions);
+    const icon = 'assets/icons/kzero-pin.png';
     this.markers.forEach((markerInfo) => {
-      const marker = new google.maps.Marker({ ...markerInfo });
+      const marker = new google.maps.Marker({ ...markerInfo, icon });
       marker.setMap(this.map);
     });
   }
