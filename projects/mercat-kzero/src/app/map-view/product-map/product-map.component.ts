@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { markers } from './markers';
 import { google } from 'google-maps';
+import { mapStyles } from './map-styles';
 
 @Component({
   selector: 'app-product-map',
@@ -16,9 +17,10 @@ export class ProductMapComponent implements AfterViewInit {
   coordinates = new google.maps.LatLng(this.lat, this.lng);
   mapOptions: google.maps.MapOptions = {
     center: this.coordinates,
-    zoom: 14,
+    zoom: 12,
     scrollwheel: false,
     gestureHandling: 'cooperative',
+    styles: mapStyles,
   };
 
   markers = markers;
