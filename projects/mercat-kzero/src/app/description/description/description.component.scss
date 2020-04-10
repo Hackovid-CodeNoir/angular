@@ -15,7 +15,7 @@ h3 {
   width: 85%;
   margin: 0 auto;
   padding: 30px;
-  color: rgba(211, 211, 211, 0.775);
+  color: rgba(211, 211, 211, 0.898);
 }
 
 p {
@@ -28,4 +28,23 @@ p {
   font-size: 55px;
   float: right;
   margin-top: 94px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    text-align: center;
+  }
+  p {
+    line-height: 1.2;
+    text-align: left;
+  }
+  .phrase {
+    font-size: 40px;
+    float: none;
+  }
+  :host {
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%), url('../../../assets/img/huerto.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
 }
