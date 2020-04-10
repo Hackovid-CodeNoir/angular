@@ -5,20 +5,12 @@
 
   section {
     width: 100%;
-
+    background-color: white;
     display: flex;
     flex-direction: column;
 
     & > * {
       flex: 1 1 0;
-    }
-
-    &:nth-child(odd) {
-      background-color: white;
-    }
-
-    &:nth-child(even) {
-      background-color: #f5f5f5;
     }
 
     .information-content {
@@ -36,6 +28,10 @@
       app-product-map {
         height: 300px;
       }
+    }
+
+    &.basket {
+      background-color: #f5f5f5;
     }
   }
 
@@ -58,6 +54,7 @@
         .information-content {
           padding: 0 64px;
           flex: 0.5;
+
           .short-description {
             margin-bottom: 12px;
           }
