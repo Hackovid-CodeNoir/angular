@@ -1,20 +1,22 @@
-.product-card {
-  max-width: 200px;
+div {
+  display: inline-block;
   margin: 16px;
-}
+  max-width: 300px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  padding: 12px;
+  background-color: white;
+  cursor: pointer;
 
-mat-card-actions {
-  text-align: center;
-}
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
+  }
 
-mat-card-content {
-  text-align: center;
-  margin-bottom: 0;
-}
-.mat-h3 {
-  margin-bottom: 5px;
-}
-
-.clear {
-  clear: both;
+  &:hover img {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+  }
 }

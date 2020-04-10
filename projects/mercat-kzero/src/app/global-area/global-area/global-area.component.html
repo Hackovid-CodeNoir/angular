@@ -17,7 +17,7 @@
   <mat-sidenav-content>
     <mat-toolbar>
       <mat-toolbar-row class="first-header-row">
-        <ng-container *ngIf="isHandset$ | async">
+        <ng-container *ngIf="false">
           <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
             <mat-icon aria-label="Side nav toggle icon" class="icon">menu</mat-icon>
           </button>
@@ -26,7 +26,6 @@
         <app-header-contact></app-header-contact>
         <span class="flex-spacer"></span>
         <div class="global-widgets">
-          <app-header-search></app-header-search>
           <ng-container *ngIf="(isHandset$ | async) === false">
             <app-header-profile></app-header-profile>
             <app-header-language-selector></app-header-language-selector>
