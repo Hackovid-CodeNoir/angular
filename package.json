@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:ca": "ng serve --configuration=ca",
+    "start:es": "ng serve --configuration=es",
     "build": "ng build",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --prod --localize",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "i18n": "ng xi18n --output-path src/locale"
   },
   "private": true,
   "husky": {
@@ -22,6 +25,7 @@
     "@angular/compiler": "~9.1.0",
     "@angular/core": "~9.1.0",
     "@angular/forms": "~9.1.0",
+    "@angular/localize": "^9.1.1",
     "@angular/material": "^9.2.0",
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
