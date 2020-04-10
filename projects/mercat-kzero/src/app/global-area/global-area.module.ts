@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
     HeaderProfileComponent,
     HeaderLanguageSelectorComponent,
     HeaderLinksComponent,
-    HeaderLogoComponent,
+    HeaderLogoComponent
   ],
   imports: [
     CommonModule,
@@ -35,8 +35,8 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatListModule,
     MatMenuModule,
-    RouterModule,
+    RouterModule
   ],
-  exports: [GlobalAreaComponent],
+  exports: [GlobalAreaComponent]
 })
 export class GlobalAreaModule {}

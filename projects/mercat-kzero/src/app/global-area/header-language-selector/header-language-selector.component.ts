@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'app-header-language-selector',
   templateUrl: './header-language-selector.component.html',
-  styleUrls: ['./header-language-selector.component.scss'],
+  styleUrls: ['./header-language-selector.component.scss']
 })
-export class HeaderLanguageSelectorComponent implements OnInit {
-  constructor() {}
+export class HeaderLanguageSelectorComponent {
+  public constructor(private platformLocation: PlatformLocation) {}
 
-  ngOnInit(): void {}
+  public handleLanguageRedirect(languageCode: string): void {
+    window.location.href = `${(this.platformLocation as any).location.origin}/${languageCode}`;
+  }
 }
