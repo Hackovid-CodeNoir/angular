@@ -1,0 +1,30 @@
+h3 {
+  margin: 0 !important;
+}
+
+:host {
+  width: 100%;
+  min-height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%), url('../../../assets/img/huerto.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.description {
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px;
+  color: rgba(211, 211, 211, 0.775);
+}
+
+p {
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-weight: lighter;
+}
+
+.phrase {
+  font-size: 55px;
+  float: right;
+  margin-top: 94px;
+}
