@@ -14,12 +14,12 @@
       background-color: lightblue;
     }
   }
+}
 
-  .mat-toolbar {
-    background: inherit;
+.mat-toolbar {
+  background: inherit;
 
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
