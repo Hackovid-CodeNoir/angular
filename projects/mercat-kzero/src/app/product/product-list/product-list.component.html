@@ -1,1 +1,7 @@
-<app-product-item [seller]="seller" *ngFor="let seller of sellers"></app-product-item>
+<h2 i18n class="mat-h2">1. Select a farm/provider:</h2>
+
+<h2 i18n class="mat-h2">2. Select a basket type:</h2>
+<div class="products-section">
+  <app-product-item [seller]="product" *ngFor="let product of products"></app-product-item>
+</div>
+<h2 i18n class="mat-h2">3. Customize your basket with desired product:</h2>

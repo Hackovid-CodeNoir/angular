@@ -1,4 +1,4 @@
-export const sellers = [
+export const products = [
   {
     id: 0,
     name: 'L´hort de Lourdes',
@@ -6,7 +6,7 @@ export const sellers = [
     img: 'assets/img/cesta.png',
     bio:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sequi fuga delectus quos expedita ut ipsam similique et ea, repellend',
-    rating: 5,
+    rating: 5
   },
   {
     id: 1,
@@ -15,6 +15,6 @@ export const sellers = [
     img: 'assets/img/cesta-1.2.png',
     bio:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sequi fuga delectus quos expedita ut ipsam similique et ea, repellend',
-    rating: 2,
-  },
+    rating: 2
+  }
 ];

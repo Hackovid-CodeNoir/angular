@@ -1,5 +1,8 @@
 :host {
+  padding: 32px;
+}
+
+.products-section {
   display: flex;
   flex-flow: row wrap;
-  padding: 32px;
 }
