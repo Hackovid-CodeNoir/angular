@@ -1,10 +1,12 @@
-:host {
-  padding: 32px;
-}
-
 .products-section {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+  height: auto;
+  padding-bottom: 64px;
+  flex-flow: column;
+
+  @media screen and (min-width: 600px) {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }

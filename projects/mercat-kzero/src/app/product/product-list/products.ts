@@ -2,7 +2,7 @@ export const products = [
   {
     id: 0,
     name: 'L´hort de Lourdes',
-    productName: 'Varied Basket',
+    productName: 'Custom Basket',
     img: 'assets/img/cesta.png',
     bio:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sequi fuga delectus quos expedita ut ipsam similique et ea, repellend',
