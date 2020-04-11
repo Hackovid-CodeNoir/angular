@@ -1,1 +1,32 @@
-<p>select-products works!</p>
+<mat-card class="product-card">
+  <img mat-card-image src="assets/img/zanahorias.png" alt="Photo of a Shiba Inu" />
+
+  <mat-card-content>
+    <p>zanahorias kg/{{ precio }}$</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-icon class="plus-icon" (click)="plusValue()">add_circle_outline</mat-icon>
+    <mat-icon class="minus-icon" (click)="minusValue()">remove_circle_outline</mat-icon>
+    <mat-form-field class="product-form-field">
+      <mat-label>{{ value * precio | number }} $</mat-label>
+      <input matInput [(ngModel)]="value" />
+    </mat-form-field>
+    <mat-icon class="cart-icon" style="margin-left: 20px;">shopping_cart</mat-icon>
+  </mat-card-actions>
+</mat-card>
+<mat-card class="product-card">
+  <img mat-card-image src="assets/img/zanahorias.png" alt="Photo of a Shiba Inu" />
+
+  <mat-card-content>
+    <p>zanahorias kg/{{ precio }}$</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-icon class="plus-icon" (click)="plusValue()">add_circle_outline</mat-icon>
+    <mat-icon class="minus-icon" (click)="minusValue()">remove_circle_outline</mat-icon>
+    <mat-form-field class="product-form-field">
+      <mat-label>{{ value * precio | number }} $</mat-label>
+      <input matInput [(ngModel)]="value" />
+    </mat-form-field>
+    <mat-icon class="cart-icon" style="margin-left: 20px;">shopping_cart</mat-icon>
+  </mat-card-actions>
+</mat-card>
