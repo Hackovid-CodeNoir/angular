@@ -1,41 +1,21 @@
-<button mat-stroked-button (click)="$event.stopPropagation()" [matMenuTriggerFor]="cart">
-  <span> 9Kg </span>
-  <span class="demo-2"> -- 13.50€ </span>
+<button (click)="$event.stopPropagation()" [matMenuTriggerFor]="cart" mat-stroked-button>
+  <ng-container *ngIf="!cartService.cartItems.isEmpty()">
+    <span> 9Kg </span>
+    <span class="demo-2"> -- 13.50€ </span>
+  </ng-container>
   <mat-icon>shopping_cart</mat-icon>
 </button>
 <mat-menu #cart="matMenu">
   <mat-list>
     <h3 matSubheader>Your selected products:</h3>
-    <mat-list-item>
-      <img matListAvatar src="assets/img/platano.png" alt="..." />
-      <h3 matLine>Banana</h3>
+    <mat-list-item *ngFor="let cartItem of cartService.cartItems.selected">
+      <img alt="{{ cartItem.product.name }}" matListAvatar src="{{ cartItem.product.image }}" />
+      <h3 matLine>{{ cartItem.product.name }}</h3>
       <p matLine>
-        <span> 3Kg </span>
-        <span class="demo-2"> -- 7.00€ </span>
+        <span> {{ cartItem.amount }} {{ cartItem.product.measurementUnit }} </span>
+        <span class="demo-2"> -- {{ cartItem.amount * cartItem.product.price | currency: 'EUR' }} </span>
       </p>
-      <button mat-icon-button (click)="$event.stopPropagation()">
-        <mat-icon>cancel</mat-icon>
-      </button>
-    </mat-list-item>
-    <mat-list-item>
-      <img matListAvatar src="assets/img/papaya.png" alt="..." />
-      <h3 matLine>Papaya</h3>
-      <p matLine>
-        <span> 5Kg </span>
-        <span class="demo-2"> -- 6.00€ </span>
-      </p>
-      <button mat-icon-button (click)="$event.stopPropagation()">
-        <mat-icon>cancel</mat-icon>
-      </button>
-    </mat-list-item>
-    <mat-list-item>
-      <img matListAvatar src="assets/img/melocoton.png" alt="..." />
-      <h3 matLine>Peach</h3>
-      <p matLine>
-        <span> 1Kg </span>
-        <span class="demo-2"> -- 2.50€ </span>
-      </p>
-      <button mat-icon-button (click)="$event.stopPropagation()">
+      <button (click)="$event.stopPropagation()" mat-icon-button>
         <mat-icon>cancel</mat-icon>
       </button>
     </mat-list-item>

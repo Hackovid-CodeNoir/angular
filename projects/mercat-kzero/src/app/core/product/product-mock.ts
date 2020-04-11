@@ -2,6 +2,7 @@ import { Product } from './product-interface';
 
 export const productsMock: Product[] = [
   {
+    id: '1',
     name: 'Carrot',
     price: 1.69,
     measurementUnit: 'Kg',
@@ -9,6 +10,7 @@ export const productsMock: Product[] = [
     image: 'assets/img/zanahorias.png'
   },
   {
+    id: '2',
     name: 'Banana',
     price: 0.5,
     measurementUnit: 'Kg',

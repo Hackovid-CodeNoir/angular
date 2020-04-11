@@ -34,7 +34,7 @@ export class SelectProductItemComponent implements OnInit, OnChanges {
         }),
         tap((value) => {
           if (this.amount.valid) {
-            this.cartService.updateCart(this.product, this.amount.value);
+            this.cartService.updateCart(this.product, +this.amount.value);
           }
         })
       )
