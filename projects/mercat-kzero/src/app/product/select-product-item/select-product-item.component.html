@@ -3,22 +3,22 @@
 
   <mat-card-content>
     <p mat-card-title>{{ product.name }} {{ product.price | currency: 'EUR' }}/{{ product.measurementUnit }}</p>
-  </mat-card-content>
-  <mat-card-actions>
     <mat-form-field class="product-form-field">
       <mat-label>Amount ({{ product.measurementUnit }})</mat-label>
       <button mat-icon-button matPrefix>
         <mat-icon (click)="decrement()" class="minus-icon">remove_circle_outline</mat-icon>
       </button>
-      <input [formControl]="amount" matInput />
+      <input [formControl]="amount" matInput type="number" />
       <button mat-icon-button matSuffix>
         <mat-icon (click)="increment()" class="plus-icon">add_circle_outline</mat-icon>
       </button>
       <mat-error *ngIf="amount.hasError('min')">Value has to be greater than zero.</mat-error>
       <mat-error *ngIf="amount.hasError('max')">Value has to be less than {{ product.availableStock }}.</mat-error>
       <mat-error *ngIf="amount.hasError('required')">This value is required!</mat-error>
+      <mat-hint>Availbale amount: {{ product.availableStock }} {{ product.measurementUnit }}</mat-hint>
     </mat-form-field>
-
+  </mat-card-content>
+  <mat-card-actions>
     <p>Subtotal: {{ amount.value * product.price | currency: 'EUR' }}</p>
   </mat-card-actions>
 </mat-card>
