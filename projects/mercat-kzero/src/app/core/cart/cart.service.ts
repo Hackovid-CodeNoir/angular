@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../product/product-interface';
 import { SelectionModel } from '@angular/cdk/collections';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 export interface CartItem {
   amount: number;
@@ -12,6 +13,9 @@ export interface CartItem {
 })
 export class CartService {
   public cartItems: SelectionModel<CartItem> = new SelectionModel<CartItem>(true);
+  public totalPrice = new BehaviorSubject(0);
+  public totalAmount = new BehaviorSubject(0);
+  public onItemRemoved = new Subject<CartItem>();
 
   constructor() {}
 
@@ -22,6 +26,13 @@ export class CartService {
     } else {
       this.addCartItem(productToUpdate, amount);
     }
+    this.updateCalculatedValues();
+  }
+
+  public deselect(cartItem): void {
+    this.cartItems.deselect(cartItem);
+    this.updateCalculatedValues();
+    this.onItemRemoved.next(cartItem);
   }
 
   private isActiveOnCart(product: Product): CartItem {
@@ -37,8 +48,20 @@ export class CartService {
   }
 
   private addCartItem(product: Product, amount: number): void {
-    this.cartItems.select({ product, amount });
+    if (amount > 0) {
+      this.cartItems.select({ product, amount });
+    }
   }
 
-  private removeFromCart(product): void {}
+  private updateCalculatedValues(): void {
+    let totalPrice = 0;
+    let totalAmount = 0;
+    this.cartItems.selected.forEach((cartItem) => {
+      totalAmount += cartItem.amount;
+      totalPrice = totalPrice + cartItem.product.price * cartItem.amount;
+    });
+
+    this.totalPrice.next(totalPrice);
+    this.totalAmount.next(totalAmount);
+  }
 }
