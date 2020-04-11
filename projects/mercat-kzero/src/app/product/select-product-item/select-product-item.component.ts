@@ -1,24 +1,33 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Product } from '../../core/product/product-interface';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-select-product-item',
   templateUrl: './select-product-item.component.html',
   styleUrls: ['./select-product-item.component.scss']
 })
-export class SelectProductItemComponent {
+export class SelectProductItemComponent implements OnChanges {
   @Input() public product: Product;
-  value = 0;
+  public amount: FormControl;
 
-  increment() {
-    if (this.value < this.product.availableStock) {
-      this.value++;
+  public ngOnChanges(): void {
+    this.amount = new FormControl(0, [
+      Validators.required,
+      Validators.min(0),
+      Validators.max(this.product.availableStock)
+    ]);
+  }
+
+  public decrement() {
+    if (+this.amount.value > 0) {
+      this.amount.setValue(+this.amount.value - 1);
     }
   }
 
-  decrement() {
-    if (this.value > 0) {
-      this.value--;
+  public increment() {
+    if (this.amount.value < this.product.availableStock) {
+      this.amount.setValue(+this.amount.value + 1);
     }
   }
 }

@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { SelectProductsComponent } from './select-products/select-products.component';
 import { SelectProductItemComponent } from './select-product-item/select-product-item.component';
@@ -19,7 +19,7 @@ import { SelectProductItemComponent } from './select-product-item/select-product
     SelectProductsComponent,
     SelectProductItemComponent
   ],
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, FormsModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, ReactiveFormsModule],
   exports: [ProductListComponent, SelectProductsComponent]
 })
 export class ProductModule {}
