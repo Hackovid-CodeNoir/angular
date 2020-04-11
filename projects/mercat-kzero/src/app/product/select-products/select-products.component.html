@@ -1,21 +1,4 @@
-<mat-card>
-  <img alt="Photo of a Shiba Inu" mat-card-image src="assets/img/zanahorias.png" />
-
-  <mat-card-content>
-    <p mat-card-title>Carrots {{ price | currency: 'EUR' }}/kg</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <mat-form-field class="product-form-field">
-      <mat-label>Amount (kg)</mat-label>
-      <button mat-icon-button matPrefix>
-        <mat-icon (click)="decrement()" class="minus-icon">remove_circle_outline</mat-icon>
-      </button>
-      <input [(ngModel)]="value" matInput />
-      <button mat-icon-button matSuffix>
-        <mat-icon (click)="increment()" class="plus-icon">add_circle_outline</mat-icon>
-      </button>
-    </mat-form-field>
-
-    <p>Subtotal: {{ value * price | currency: 'EUR' }}</p>
-  </mat-card-actions>
-</mat-card>
+<app-select-product-item
+  *ngFor="let product of productService.products$ | async"
+  [product]="product"
+></app-select-product-item>

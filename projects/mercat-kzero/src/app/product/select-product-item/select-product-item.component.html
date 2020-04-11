@@ -1,0 +1,21 @@
+<mat-card *ngIf="product">
+  <img [alt]="product.name" [src]="product.image" mat-card-image />
+
+  <mat-card-content>
+    <p mat-card-title>{{ product.name }} {{ product.price | currency: 'EUR' }}/{{ product.measurementUnit }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-form-field class="product-form-field">
+      <mat-label>Amount ({{ product.measurementUnit }})</mat-label>
+      <button mat-icon-button matPrefix>
+        <mat-icon (click)="decrement()" class="minus-icon">remove_circle_outline</mat-icon>
+      </button>
+      <input [(ngModel)]="value" matInput />
+      <button mat-icon-button matSuffix>
+        <mat-icon (click)="increment()" class="plus-icon">add_circle_outline</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <p>Subtotal: {{ value * product.price | currency: 'EUR' }}</p>
+  </mat-card-actions>
+</mat-card>

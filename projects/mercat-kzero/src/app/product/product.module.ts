@@ -9,9 +9,16 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { SelectProductsComponent } from './select-products/select-products.component';
+import { SelectProductItemComponent } from './select-product-item/select-product-item.component';
 
 @NgModule({
-  declarations: [ProductListComponent, ProductItemComponent, RatingStarsComponent, SelectProductsComponent],
+  declarations: [
+    ProductListComponent,
+    ProductItemComponent,
+    RatingStarsComponent,
+    SelectProductsComponent,
+    SelectProductItemComponent
+  ],
   imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, FormsModule],
   exports: [ProductListComponent, SelectProductsComponent]
 })

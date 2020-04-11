@@ -48,6 +48,10 @@
         }
       }
 
+      &.products {
+        height: unset;
+      }
+
       &.basket {
         flex-direction: column;
 
