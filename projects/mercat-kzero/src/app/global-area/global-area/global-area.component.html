@@ -27,6 +27,7 @@
         <span class="flex-spacer"></span>
         <div class="global-widgets">
           <ng-container *ngIf="(isHandset$ | async) === false">
+            <app-header-cart></app-header-cart>
             <app-header-profile></app-header-profile>
             <app-header-language-selector></app-header-language-selector>
           </ng-container>

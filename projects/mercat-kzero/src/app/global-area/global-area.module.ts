@@ -15,6 +15,7 @@ import { HeaderLanguageSelectorComponent } from './header-language-selector/head
 import { HeaderLinksComponent } from './header-links/header-links.component';
 import { HeaderLogoComponent } from './header-logo/header-logo.component';
 import { RouterModule } from '@angular/router';
+import { HeaderCartComponent } from './header-cart/header-cart.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
     HeaderProfileComponent,
     HeaderLanguageSelectorComponent,
     HeaderLinksComponent,
-    HeaderLogoComponent
+    HeaderLogoComponent,
+    HeaderCartComponent
   ],
   imports: [
     CommonModule,
