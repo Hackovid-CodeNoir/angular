@@ -1,1 +1,4 @@
-<p>select-products works!</p>
+<app-select-product-item
+  *ngFor="let product of productService.products$ | async"
+  [product]="product"
+></app-select-product-item>

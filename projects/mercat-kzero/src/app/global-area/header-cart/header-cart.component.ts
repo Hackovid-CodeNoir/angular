@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CartService } from '../../core/cart/cart.service';
 
 @Component({
   selector: 'app-header-cart',
@@ -7,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderCartComponent implements OnInit {
-  constructor() {}
+  constructor(public cartService: CartService) {}
 
   ngOnInit(): void {}
 }
