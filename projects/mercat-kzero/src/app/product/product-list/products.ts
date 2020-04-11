@@ -1,7 +1,6 @@
 export const products = [
   {
     id: 0,
-    name: 'L´hort de Lourdes',
     productName: 'Varied Basket',
     img: 'assets/img/cesta.png',
     bio:
@@ -10,7 +9,6 @@ export const products = [
   },
   {
     id: 1,
-    name: 'Can Manel',
     productName: 'Surprise Basket',
     img: 'assets/img/cesta-1.2.png',
     bio:

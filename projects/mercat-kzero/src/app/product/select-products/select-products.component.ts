@@ -1,12 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { seller } from './seller';
 
 @Component({
   selector: 'app-select-products',
   templateUrl: './select-products.component.html',
   styleUrls: ['./select-products.component.scss']
 })
-export class SelectProductsComponent implements OnInit {
-  constructor() {}
+export class SelectProductsComponent {
+  seller = seller;
+  value = 0;
+  currentValue: number;
+  precio = 1.37;
 
-  ngOnInit(): void {}
+  plusValue() {
+    this.value++;
+  }
+
+  minusValue() {
+    if (this.value > 0) {
+      this.value--;
+    }
+  }
 }
