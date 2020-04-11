@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
-import { markers } from './markers';
+import { farms } from './farms';
 import { google } from 'google-maps';
 import { mapStyles } from './map-styles';
 
@@ -23,7 +23,7 @@ export class ProductMapComponent implements AfterViewInit {
     styles: mapStyles
   };
 
-  markers = markers;
+  farms = farms;
 
   ngAfterViewInit() {
     this.mapInitializer();
@@ -32,8 +32,11 @@ export class ProductMapComponent implements AfterViewInit {
   mapInitializer() {
     this.map = new google.maps.Map(this.gmap.nativeElement, this.mapOptions);
     const icon = 'assets/icons/kzero-pin.png';
-    this.markers.forEach((markerInfo) => {
-      const marker = new google.maps.Marker({ ...markerInfo, icon });
+    this.farms.forEach((farm) => {
+      const marker = new google.maps.Marker({ ...farm, icon });
+      marker.addListener('click', () => {
+        console.log(farm.title);
+      });
       marker.setMap(this.map);
     });
   }
