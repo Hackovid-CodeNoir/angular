@@ -48,10 +48,6 @@
         }
       }
 
-      &.products {
-        height: unset;
-      }
-
       &.basket {
         flex-direction: column;
 
@@ -63,6 +59,11 @@
             margin-bottom: 12px;
           }
         }
+      }
+
+      &.products {
+        height: unset;
+        min-height: calc(100vh - 64px);
       }
     }
   }

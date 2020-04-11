@@ -1,0 +1,18 @@
+app-select-products {
+  display: flex;
+  flex-direction: column;
+
+  .mat-card {
+    margin: 32px;
+  }
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .mat-card {
+      max-width: 300px;
+    }
+  }
+}

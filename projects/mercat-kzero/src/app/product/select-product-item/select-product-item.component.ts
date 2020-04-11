@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, ViewEncapsulation } from '@angular/core';
 import { Product } from '../../core/product/product-interface';
 import { FormControl, Validators } from '@angular/forms';
 
