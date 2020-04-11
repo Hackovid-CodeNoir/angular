@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class SelectProductsComponent {
   value = 0;
-  precio = 1.37;
+  price = 1.37;
 
-  plusValue() {
+  increment() {
     this.value++;
   }
 
-  minusValue() {
+  decrement() {
     if (this.value > 0) {
       this.value--;
     }
