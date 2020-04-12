@@ -1,4 +1,4 @@
-# HackovidAngular by CodeNoir
+# Mercat KZero by CodeNoir
 
 **Mercat KZero** is an e-commerce platform for small agricultural producers. Its main objectives are to make small producers known, offer products without intermediaries, and create a collaborative economy model that reduces consumer costs and benefits producers simultaneously.
 
