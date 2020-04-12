@@ -5,4 +5,11 @@ export interface Product {
   availableStock: number;
   name: string;
   measurementUnit: string;
+  productType: ProductType;
+}
+
+export enum ProductType {
+  VEGETABLES = 'Vegetables',
+  FRUITS = 'Fruits',
+  TUBERCLES = 'Tubercles'
 }

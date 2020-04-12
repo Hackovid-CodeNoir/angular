@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { SelectProductsComponent } from './select-products/select-products.component';
 import { SelectProductItemComponent } from './select-product-item/select-product-item.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,17 @@ import { SelectProductItemComponent } from './select-product-item/select-product
     SelectProductsComponent,
     SelectProductItemComponent
   ],
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatExpansionModule,
+    RouterModule
+  ],
   exports: [ProductListComponent, SelectProductsComponent]
 })
 export class ProductModule {}
