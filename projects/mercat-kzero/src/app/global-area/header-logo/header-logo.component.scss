@@ -2,7 +2,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
   img {
     width: 36px;
+  }
+
+  h1 {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
