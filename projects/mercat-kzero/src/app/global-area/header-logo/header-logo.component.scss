@@ -5,6 +5,11 @@
 
   img {
     width: 36px;
+    transition: all ease 0.2s;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
   }
 
   h1 {
