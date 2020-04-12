@@ -1,8 +1,6 @@
 :host {
   width: 100%;
-  min-height: 90vh;
-  background: url('../../../assets/img/fondo5.jpg');
-  background-position: center center;
+  background: url('../../../assets/img/fondo5.jpg') center center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -12,43 +10,34 @@
   width: 85%;
   margin: 0 auto;
   padding: 10px 30px;
-  color: rgba(187, 124, 7, 0.925);
 }
 
 p {
   margin-bottom: 40px;
   line-height: 1.5;
-  font-weight: lighter;
-}
-
-.phrase {
-  color: rgb(56, 0, 20);
-  font-size: 55px;
-  font-weight: bold;
-  float: right;
-  margin-top: 94px;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .logo {
   margin-top: 10px;
-  width: 350px;
+  width: 100%;
+  max-width: 200px;
 }
 
-@media (max-width: 600px) {
+@media screen and (min-width: 600px) {
   h1 {
     text-align: center;
   }
+
   p {
     line-height: 1.2;
     text-align: left;
   }
-  .phrase {
-    font-size: 40px;
-    float: none;
-  }
-  :host {
-    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%), url('assets/img/huerto.jpg');
-    background-position: center center;
-    background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    max-width: 400px;
   }
 }
