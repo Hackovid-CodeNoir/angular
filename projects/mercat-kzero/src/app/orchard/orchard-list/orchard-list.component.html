@@ -1,1 +1,12 @@
-<p>orchard-list works!</p>
+<div *ngFor="let producer of producerService.producers$ | async">
+  <p>{{ producer.displayName }}</p>
+  <ul>
+    <li>{{ producer.id }}</li>
+    <li>{{ producer.location }}</li>
+    <li>{{ producer.rating }}</li>
+  </ul>
+  <p>Products</p>
+  <ol>
+    <li *ngFor="let product of producer.products">{{ product.name }}</li>
+  </ol>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProducerService } from '../../core/producer/producer.service';
 
 @Component({
   selector: 'app-orchard-list',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orchard-list.component.scss']
 })
 export class OrchardListComponent implements OnInit {
-  constructor() {}
+  public constructor(public producerService: ProducerService) {}
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {}
 }
