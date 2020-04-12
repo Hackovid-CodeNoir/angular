@@ -3,7 +3,7 @@
 
   <mat-card-content>
     <p mat-card-title>{{ product.name }} {{ product.price | currency: 'EUR' }}/{{ product.measurementUnit }}</p>
-    <mat-form-field appearance="fill">
+    <mat-form-field>
       <button mat-icon-button matPrefix>
         <mat-icon (click)="decrement()" class="minus-icon">remove_circle_outline</mat-icon>
       </button>

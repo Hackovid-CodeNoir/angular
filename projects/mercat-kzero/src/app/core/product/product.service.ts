@@ -9,6 +9,7 @@ import { Product } from './product-interface';
 export class ProductService {
   private productsSubject = new BehaviorSubject<Product[]>(productsMock);
   public products$ = this.productsSubject.asObservable();
+  public type = this.productsSubject.asObservable();
 
   public constructor() {}
 }

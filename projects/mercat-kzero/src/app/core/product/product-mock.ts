@@ -18,5 +18,14 @@ export const productsMock: Product[] = [
     availableStock: 20,
     image: 'assets/img/platano.png',
     typeOfProduct: 'fruit'
+  },
+  {
+    id: '2',
+    name: 'Beans',
+    price: 0.5,
+    measurementUnit: 'g',
+    availableStock: 20,
+    image: 'assets/img/legumbres.png',
+    typeOfProduct: 'vegetables'
   }
 ];
