@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../product/product-interface';
 import { SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { Product } from '../product/product.interface';
 
 export interface CartItem {
   amount: number;

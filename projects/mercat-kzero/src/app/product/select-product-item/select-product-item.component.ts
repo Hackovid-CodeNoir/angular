@@ -1,8 +1,8 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { Product } from '../../core/product/product-interface';
 import { FormControl, Validators } from '@angular/forms';
 import { CartService } from '../../core/cart/cart.service';
 import { debounceTime, distinctUntilChanged, map, tap } from 'rxjs/operators';
+import { Product } from '../../core/product/product.interface';
 
 @Component({
   selector: 'app-select-product-item',

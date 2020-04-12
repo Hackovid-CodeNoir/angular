@@ -7,17 +7,19 @@ import { MainContentRoutingModule } from './main-content-routing.module';
 import { DescriptionModule } from '../description/description.module';
 import { OrchardModule } from '../orchard/orchard.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [MainContentComponent],
   imports: [
     CommonModule,
+    MainContentRoutingModule,
     ProductModule,
     MapViewModule,
-    MainContentRoutingModule,
     DescriptionModule,
     OrchardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ]
 })
 export class MainContentModule {}

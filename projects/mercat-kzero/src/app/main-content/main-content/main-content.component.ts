@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductListComponent } from '../../product/product-list/product-list.component';
 import { Producer } from '../../core/producer/producer.interface';
+import { tap } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',
@@ -9,11 +12,28 @@ import { Producer } from '../../core/producer/producer.interface';
   styleUrls: ['./main-content.component.scss']
 })
 export class MainContentComponent {
-  constructor(private matDialog: MatDialog) {}
+  constructor(private matDialog: MatDialog, private matSnackBar: MatSnackBar, private router: Router) {}
 
   public onMarkerClicked(producer: Producer): void {
-    this.matDialog.open(ProductListComponent, {
+    const orchardDetailsDialog = this.matDialog.open(ProductListComponent, {
       data: producer
     });
+
+    orchardDetailsDialog
+      .afterClosed()
+      .pipe(
+        tap((response) => {
+          this.handleBasketRedirection(response.producer, response.basket);
+        })
+      )
+      .subscribe();
+  }
+
+  public handleBasketRedirection(producer, basket): void {
+    if (basket.id === 0) {
+      this.router.navigateByUrl('/products');
+    } else {
+      this.matSnackBar.open('Feature is under development!', null, { duration: 2000 });
+    }
   }
 }
