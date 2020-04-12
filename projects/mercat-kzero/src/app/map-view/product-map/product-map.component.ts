@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { google } from 'google-maps';
 import { mapStyles } from './map-styles';
-import { producersMock } from '../../core/producer/producers-mock';
 import { ProducerService } from '../../core/producer/producer.service';
+import { Producer } from '../../core/producer/producer.interface';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-map',
@@ -10,7 +11,7 @@ import { ProducerService } from '../../core/producer/producer.service';
   styleUrls: ['./product-map.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ProductMapComponent implements AfterViewInit {
+export class ProductMapComponent implements OnInit, AfterViewInit {
   @ViewChild('mapContainer', { static: false }) public gmap: ElementRef;
   private lat = 41.387124;
   private lng = 2.170037;
@@ -24,16 +25,29 @@ export class ProductMapComponent implements AfterViewInit {
     styles: mapStyles
   };
 
-  private producers = this.producerService.producers;
+  private producers: Producer[];
 
   public constructor(private producerService: ProducerService) {}
 
+  public ngOnInit(): void {
+    this.producerService.producers$.pipe(debounceTime(300), distinctUntilChanged()).subscribe((producers) => {
+      this.producers = producers || [];
+      this.addMarkers();
+    });
+  }
+
   public ngAfterViewInit(): void {
     this.mapInitializer();
+    if (this.producers && this.producers.length) {
+      this.addMarkers();
+    }
   }
 
   private mapInitializer(): void {
     this.map = new google.maps.Map(this.gmap.nativeElement, this.mapOptions);
+  }
+
+  private addMarkers() {
     const icon = 'assets/icons/kzero-pin.png';
     this.producers.forEach((producer) => {
       const marker = new google.maps.Marker({ ...producer, icon });
