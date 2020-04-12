@@ -1,4 +1,4 @@
-<button (click)="$event.stopPropagation()" [matMenuTriggerFor]="cart" mat-stroked-button>
+<button (click)="$event.stopPropagation()" [matMenuTriggerFor]="cart" mat-button>
   <ng-container *ngIf="!cartService.cartItems.isEmpty()">
     <span> {{ cartService.totalAmount | async }} Kg </span>
     <span class="demo-2"> -- {{ cartService.totalPrice | async | currency: 'EUR' }} </span>
