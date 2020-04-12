@@ -10,11 +10,15 @@ import { Subject } from 'rxjs';
   encapsulation: ViewEncapsulation.None
 })
 export class SelectProductsComponent implements OnInit {
-  public panelOpenState = false;
+  public step = 0;
   public productsSubject = new Subject<string[]>();
   public groupedProducts;
 
   public constructor(public productService: ProductService) {}
+
+  public setStep(index: number) {
+    this.step = index;
+  }
 
   public ngOnInit(): void {
     this.productService.products$

@@ -15,6 +15,16 @@ app-select-products {
     flex-wrap: wrap;
   }
 
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .separator {
+      margin: 0 8px;
+    }
+  }
+
   @media screen and (min-width: 600px) {
     .mat-card {
       max-width: 300px;

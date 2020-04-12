@@ -12,6 +12,7 @@ import { SelectProductsComponent } from './select-products/select-products.compo
 import { SelectProductItemComponent } from './select-product-item/select-product-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatInputModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    RouterModule
   ],
   exports: [ProductListComponent, SelectProductsComponent]
 })
