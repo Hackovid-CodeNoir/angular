@@ -1,4 +1,13 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import { google } from 'google-maps';
 import { mapStyles } from './map-styles';
 import { ProducerService } from '../../core/producer/producer.service';
@@ -13,6 +22,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 })
 export class ProductMapComponent implements OnInit, AfterViewInit {
   @ViewChild('mapContainer', { static: false }) public gmap: ElementRef;
+  @Output() public markerClicked = new EventEmitter();
   private lat = 41.387124;
   private lng = 2.170037;
   private map: google.maps.Map;
@@ -58,6 +68,6 @@ export class ProductMapComponent implements OnInit, AfterViewInit {
 
   private onMarkerClick(producer): void {
     this.producerService.selectedProducer = producer;
-    console.log(producer);
+    this.markerClicked.emit(producer);
   }
 }

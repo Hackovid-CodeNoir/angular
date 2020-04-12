@@ -1,12 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductListComponent } from '../../product/product-list/product-list.component';
+import { Producer } from '../../core/producer/producer.interface';
 
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.scss'],
+  styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent implements OnInit {
-  constructor() {}
+export class MainContentComponent {
+  constructor(private matDialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  public onMarkerClicked(producer: Producer): void {
+    this.matDialog.open(ProductListComponent, {
+      data: producer
+    });
+  }
 }

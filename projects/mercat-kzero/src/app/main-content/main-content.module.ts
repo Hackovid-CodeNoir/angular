@@ -6,9 +6,18 @@ import { MapViewModule } from '../map-view/map-view.module';
 import { MainContentRoutingModule } from './main-content-routing.module';
 import { DescriptionModule } from '../description/description.module';
 import { OrchardModule } from '../orchard/orchard.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [MainContentComponent],
-  imports: [CommonModule, ProductModule, MapViewModule, MainContentRoutingModule, DescriptionModule, OrchardModule]
+  imports: [
+    CommonModule,
+    ProductModule,
+    MapViewModule,
+    MainContentRoutingModule,
+    DescriptionModule,
+    OrchardModule,
+    MatDialogModule
+  ]
 })
 export class MainContentModule {}

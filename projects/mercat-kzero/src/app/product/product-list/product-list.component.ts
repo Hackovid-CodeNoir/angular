@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { products } from './products';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Producer } from '../../core/producer/producer.interface';
 
 @Component({
   selector: 'app-product-list',
@@ -8,4 +10,6 @@ import { products } from './products';
 })
 export class ProductListComponent {
   public products = products;
+
+  constructor(@Inject(MAT_DIALOG_DATA) public producer: Producer) {}
 }
