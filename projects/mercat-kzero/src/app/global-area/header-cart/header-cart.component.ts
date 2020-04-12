@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { CartService } from '../../core/cart/cart.service';
 
 @Component({
@@ -7,8 +7,10 @@ import { CartService } from '../../core/cart/cart.service';
   styleUrls: ['./header-cart.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HeaderCartComponent implements OnInit {
+export class HeaderCartComponent {
   constructor(public cartService: CartService) {}
 
-  ngOnInit(): void {}
+  getCartBadge(cartItemsLength: number): string | null {
+    return cartItemsLength > 0 ? cartItemsLength.toString() : null;
+  }
 }

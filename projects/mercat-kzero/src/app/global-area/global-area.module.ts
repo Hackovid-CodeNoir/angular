@@ -16,6 +16,7 @@ import { HeaderLinksComponent } from './header-links/header-links.component';
 import { HeaderLogoComponent } from './header-logo/header-logo.component';
 import { RouterModule } from '@angular/router';
 import { HeaderCartComponent } from './header-cart/header-cart.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HeaderCartComponent } from './header-cart/header-cart.component';
     MatIconModule,
     MatListModule,
     MatMenuModule,
-    RouterModule
+    RouterModule,
+    MatBadgeModule
   ],
   exports: [GlobalAreaComponent]
 })
