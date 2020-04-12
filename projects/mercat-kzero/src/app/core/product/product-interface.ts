@@ -5,4 +5,5 @@ export interface Product {
   availableStock: number;
   name: string;
   measurementUnit: string;
+  typeOfProduct: string;
 }

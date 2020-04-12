@@ -7,7 +7,8 @@ export const productsMock: Product[] = [
     price: 1.69,
     measurementUnit: 'Kg',
     availableStock: 80,
-    image: 'assets/img/zanahorias.png'
+    image: 'assets/img/zanahorias.png',
+    typeOfProduct: 'vegetable'
   },
   {
     id: '2',
@@ -15,6 +16,7 @@ export const productsMock: Product[] = [
     price: 0.5,
     measurementUnit: 'Kg',
     availableStock: 20,
-    image: 'assets/img/platano.png'
+    image: 'assets/img/platano.png',
+    typeOfProduct: 'fruit'
   }
 ];
