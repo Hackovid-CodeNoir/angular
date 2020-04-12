@@ -9,7 +9,7 @@ export interface Product {
 }
 
 export enum ProductType {
-  VEGETABLES,
-  FRUITS,
-  TUBERCLES
+  VEGETABLES = 'Vegetables',
+  FRUITS = 'Fruits',
+  TUBERCLES = 'Tubercles'
 }
