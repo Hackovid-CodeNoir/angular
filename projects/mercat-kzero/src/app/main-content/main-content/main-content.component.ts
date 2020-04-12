@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductListComponent } from '../../product/product-list/product-list.component';
 import { Producer } from '../../core/producer/producer.interface';
-import { tap } from 'rxjs/operators';
+import { filter, tap } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
@@ -22,6 +22,7 @@ export class MainContentComponent {
     orchardDetailsDialog
       .afterClosed()
       .pipe(
+        filter((response) => response),
         tap((response) => {
           this.handleBasketRedirection(response.producer, response.basket);
         })
