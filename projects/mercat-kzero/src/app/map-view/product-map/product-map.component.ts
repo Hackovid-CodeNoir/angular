@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } fr
 import { google } from 'google-maps';
 import { mapStyles } from './map-styles';
 import { producersMock } from '../../core/producer/producers-mock';
+import { ProducerService } from '../../core/producer/producer.service';
 
 @Component({
   selector: 'app-product-map',
@@ -23,7 +24,9 @@ export class ProductMapComponent implements AfterViewInit {
     styles: mapStyles
   };
 
-  private producers = producersMock;
+  private producers = this.producerService.producers;
+
+  public constructor(private producerService: ProducerService) {}
 
   public ngAfterViewInit(): void {
     this.mapInitializer();
@@ -34,12 +37,13 @@ export class ProductMapComponent implements AfterViewInit {
     const icon = 'assets/icons/kzero-pin.png';
     this.producers.forEach((producer) => {
       const marker = new google.maps.Marker({ ...producer, icon });
-      marker.addListener('click', (_) => this.onMarkerClick(producer));
+      marker.addListener('click', () => this.onMarkerClick(producer));
       marker.setMap(this.map);
     });
   }
 
   private onMarkerClick(producer): void {
+    this.producerService.selectedProducer = producer;
     console.log(producer);
   }
 }
