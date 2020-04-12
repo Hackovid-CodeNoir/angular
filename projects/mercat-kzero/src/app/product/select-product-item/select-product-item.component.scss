@@ -1,17 +1,19 @@
 :host {
   .mat-card {
     text-align: center;
-    width: 100px;
-    height: 190px;
+    width: 130px;
+    height: 210px;
     .mat-form-field {
       width: 100%;
     }
     .mat-card-image {
       width: 100%;
+      margin: 0;
     }
     .mat-card-title {
       font-size: 15px;
-      margin: 0;
+      margin-top: 0;
+      margin-bottom: 5px;
     }
   }
 }
