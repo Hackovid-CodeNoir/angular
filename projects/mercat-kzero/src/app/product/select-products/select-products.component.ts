@@ -8,5 +8,5 @@ import { ProductService } from '../../core/product/product.service';
   encapsulation: ViewEncapsulation.None
 })
 export class SelectProductsComponent {
-  public constructor(private productService: ProductService) {}
+  public constructor(public productService: ProductService) {}
 }
