@@ -1,4 +1,14 @@
-<app-select-product-item
-  *ngFor="let product of productService.products$ | async"
-  [product]="product"
-></app-select-product-item>
+<h1 i18n class="mat-title-h1">Choose a category</h1>
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      Legumbres
+    </mat-expansion-panel-header>
+    <div class="products">
+      <app-select-product-item
+        *ngFor="let product of productService.products$ | async"
+        [product]="product"
+      ></app-select-product-item>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

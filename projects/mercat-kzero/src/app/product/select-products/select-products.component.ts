@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ProductService } from '../../core/product/product.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { ProductService } from '../../core/product/product.service';
   styleUrls: ['./select-products.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SelectProductsComponent {
+export class SelectProductsComponent implements OnInit {
+  public panelOpenState = false;
+
   public constructor(public productService: ProductService) {}
+
+  public ngOnInit(): void {}
 }

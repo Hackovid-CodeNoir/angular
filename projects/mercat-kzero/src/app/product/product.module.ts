@@ -11,6 +11,7 @@ import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { SelectProductsComponent } from './select-products/select-products.component';
 import { SelectProductItemComponent } from './select-product-item/select-product-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule
   ],
   exports: [ProductListComponent, SelectProductsComponent]
 })

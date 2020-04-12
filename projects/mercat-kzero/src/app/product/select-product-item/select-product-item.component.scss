@@ -1,8 +1,22 @@
 :host {
   .mat-card {
     text-align: center;
+    width: 130px;
+    height: 210px;
+
+    .mat-form-field {
+      width: 100%;
+    }
+
     .mat-card-image {
       width: 100%;
+      margin: 0;
+    }
+
+    .mat-card-title {
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 5px;
     }
   }
 }

@@ -1,16 +1,21 @@
 app-select-products {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  overflow: auto;
+  height: calc(100vh - 64px);
+  padding: 32px;
+  box-sizing: border-box;
 
   .mat-card {
     margin: 32px;
   }
 
-  @media screen and (min-width: 600px) {
+  .products {
+    display: flex;
     flex-direction: row;
-    width: 100%;
     flex-wrap: wrap;
+  }
 
+  @media screen and (min-width: 600px) {
     .mat-card {
       max-width: 300px;
     }
