@@ -4,9 +4,10 @@ app-select-products {
   height: calc(100vh - 64px);
   padding: 32px;
   box-sizing: border-box;
+  background-color: #fff2dd;
 
   .mat-card {
-    margin: 32px;
+    margin: 12px 0;
   }
 
   .products {
@@ -28,6 +29,7 @@ app-select-products {
   @media screen and (min-width: 600px) {
     .mat-card {
       max-width: 300px;
+      margin: 32px;
     }
   }
 }
