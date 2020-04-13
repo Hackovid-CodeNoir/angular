@@ -11,9 +11,9 @@
       <button mat-icon-button matSuffix>
         <mat-icon (click)="increment()" class="plus-icon">add_circle_outline</mat-icon>
       </button>
-      <mat-error *ngIf="amount.hasError('min')">Value has to be greater than zero.</mat-error>
-      <mat-error *ngIf="amount.hasError('max')">Value has to be less than {{ product.availableStock }}.</mat-error>
-      <mat-error *ngIf="amount.hasError('required')">This value is required!</mat-error>
+      <mat-error i18n *ngIf="amount.hasError('min')">Value has to be greater than zero.</mat-error>
+      <mat-error i18n *ngIf="amount.hasError('max')">Value has to be less than {{ product.availableStock }}.</mat-error>
+      <mat-error i18n *ngIf="amount.hasError('required')">This value is required!</mat-error>
     </mat-form-field>
   </mat-card-content>
 </mat-card>
