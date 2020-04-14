@@ -4,7 +4,9 @@ app-select-products {
   height: calc(100vh - 64px);
   padding: 32px;
   box-sizing: border-box;
-  background-color: #fff2dd;
+  background: url('../../../../assets/img/fondo7.png');
+  background-position: bottom center;
+  background-size: initial;
 
   .mat-card {
     margin: 12px 0;
